@@ -1,0 +1,11 @@
+Secure Samsung Clipboard 
+by Tungstwenty
+
+
+Changes the clipboard engine used by Samsung (which includes history) to be
+secure with regards to e.g. password managers placing sensitive items there.
+
+
+This project uses:
+- Xposed framework, by rovo89
+
