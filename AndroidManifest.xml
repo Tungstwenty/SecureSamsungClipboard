@@ -14,8 +14,8 @@
             android:value="true" />
         <meta-data
             android:name="xposeddescription"
-            android:value="Makes the Samsung Clipboard secure, currently by limiting the history to 1 item.
-\n(in future versions more granular control might be introduced, e.g. for specific apps like password managers)" />
+            android:value="Makes the Samsung Clipboard secure, i.e. removes all history when an empty string is
+copied to the clipboard (as used by e.g. password managers)." />
         <meta-data
             android:name="xposedminversion"
             android:value="2.0*" />
