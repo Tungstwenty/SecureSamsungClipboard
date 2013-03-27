@@ -72,7 +72,7 @@ public class XposedMod implements IXposedHookZygoteInit, IXposedHookLoadPackage,
 				findAndHookMethod(clsClipDataMgr, "addData", "android.sec.clipboard.data.ClipboardData",
 				    new XC_MethodHook() {
 					    @Override
-					    protected void beforeHookedMethod(MethodHookParam param) throws Throwable {
+					    protected void afterHookedMethod(MethodHookParam param) throws Throwable {
 						    // Check if adding empty string, which triggers clearing the clipboard
 
 						    if (!param.args[0].getClass().getName().equals(CLASS_CLIPBOARDDATATEXT))
@@ -93,7 +93,6 @@ public class XposedMod implements IXposedHookZygoteInit, IXposedHookLoadPackage,
 							    msg.arg1 = 1;
 							    mHandler.sendMessageDelayed(msg, 200L);
 						    }
-						    param.setResult(true);
 					    }
 				    });
 			} catch (Throwable t) {
